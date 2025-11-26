@@ -4,6 +4,7 @@ import (
 	"strings"
 )
 
+// Compares runes of string one by one from both sides of given string
 func HalfComparison(s string) bool {
 
 	s = strings.ToLower(s)
@@ -31,6 +32,8 @@ func HalfComparison(s string) bool {
 	return true
 }
 
+
+// Create a reverse string and compares it to the given one
 func Reverse(s string) bool {
 
 	s = strings.ToLower(s)
@@ -58,6 +61,8 @@ func Reverse(s string) bool {
 	return string(reversed) == s
 }
 
+
+// Recursivly checks wether starting and ending symbols are equal until the edge cases
 func doPalindrome(s string) bool {
 
 	if len(s) == 0{
