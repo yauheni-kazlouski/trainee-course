@@ -9,6 +9,6 @@ func TestHello(t *testing.T) {
 	got := Hello()
 
 	if expected != got {
-		t.Fatalf("expected: %s, got: %s", expected, got)
+		t.Errorf("expected: %s, got: %s", expected, got)
 	}
 }
