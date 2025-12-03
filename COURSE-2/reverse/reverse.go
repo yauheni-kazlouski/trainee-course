@@ -52,7 +52,7 @@ func ClearReverse(s string) string {
 
 
 func reverseWord(s string) string{
-	temp := []byte(s)
+	temp := []rune(s)
 
 	for i := 0; i < len(temp)/2; i++ {
 		temp[i], temp[len(temp)-1-i] = temp[len(temp)-1-i], temp[i]
