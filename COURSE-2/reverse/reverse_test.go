@@ -20,7 +20,7 @@ func TestClearReverse(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			got := ClearReverse(test.input)
 			if got != test.want {
-				t.Fatalf("input \"%s\" expected: \"%v\", got: \"%v\"", test.input, test.want, got)
+				t.Errorf("input \"%s\" expected: \"%v\", got: \"%v\"", test.input, test.want, got)
 			}
 		})
 	}
@@ -31,7 +31,7 @@ func TestPoweredReverse(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			got := PoweredReverse(test.input)
 			if got != test.want {
-				t.Fatalf("input \"%s\" expected: \"%v\", got: \"%v\"", test.input, test.want, got)
+				t.Errorf("input \"%s\" expected: \"%v\", got: \"%v\"", test.input, test.want, got)
 			}
 		})
 	}

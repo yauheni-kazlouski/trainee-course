@@ -21,7 +21,7 @@ func TestHalfComparison(t *testing.T) {
 		t.Run(name, func(tt *testing.T) {
 			got := HalfComparison(test.word)
 			if test.want != got {
-				tt.Fatalf("word %s expected: %v, got: %v", test.word, test.want, got)
+				tt.Errorf("word %s expected: %v, got: %v", test.word, test.want, got)
 			}
 		})
 	}
@@ -34,7 +34,7 @@ func TestReverse(t *testing.T) {
 		t.Run(name, func(tt *testing.T) {
 			got := Reverse(test.word)
 			if test.want != got {
-				tt.Fatalf("word %s expected: %v, got: %v", test.word, test.want, got)
+				tt.Errorf("word %s expected: %v, got: %v", test.word, test.want, got)
 			}
 		})
 	}
@@ -45,7 +45,7 @@ func TestRecursive(t *testing.T) {
 		t.Run(name, func(tt *testing.T) {
 			got := Recursive(test.word)
 			if test.want != got {
-				tt.Fatalf("word %s expected: %v, got: %v", test.word, test.want, got)
+				tt.Errorf("word %s expected: %v, got: %v", test.word, test.want, got)
 			}
 		})
 	}

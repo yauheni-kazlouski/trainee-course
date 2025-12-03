@@ -20,7 +20,7 @@ func TestUniqueStrings(t *testing.T) {
 		t.Run(name, func(t *testing.T){
 			got := UniqueStrings(test.input)
 			if !slices.Equal(got, test.want) {
-				t.Fatalf("input %#v, expected: %#v, got: %#v", test.input, test.want, got)
+				t.Errorf("input %#v, expected: %#v, got: %#v", test.input, test.want, got)
 			}
 		})
 	}
