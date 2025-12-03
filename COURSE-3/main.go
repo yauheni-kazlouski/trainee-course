@@ -71,7 +71,7 @@ func main() {
 
 	case "circle":
 		if radius <= 0 {
-			fmt.Println("Error: Flag -radius used with -shape='cirlce' must take values > 0")
+			fmt.Println("Error: Flag -radius used with -shape='circle' must take values > 0")
 			return
 		}
 

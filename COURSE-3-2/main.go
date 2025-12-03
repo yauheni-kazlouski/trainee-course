@@ -38,7 +38,7 @@ func (h *CompositeHandler) Handle(ctx context.Context, rec slog.Record) error {
 	for _, el := range(h.handlers){
 		err := el.Handle(ctx, rec)
 		if err != nil {
-			return err
+			fmt.Printf("Error with %#v handler: %s", el, err.Error())
 		}
 	}
 
@@ -74,6 +74,7 @@ func main() {
 		fmt.Println(err.Error())
 		return
 	}
+	defer logFile.Close()
 
 	// Create composite handler for JSON file and text output and logger with this handler
 	compHandler := NewCompositeHandler(slog.NewJSONHandler(logFile, nil), slog.NewTextHandler(os.Stdout, nil))
